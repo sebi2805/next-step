@@ -71,3 +71,23 @@
   transform: scale(0.8); /* Scale down the side slides */
   opacity: 0.5; /* Slightly reduce opacity for the side slides */
 }
+/* For Webkit browsers (Chrome, Safari, Edge) */
+body::-webkit-scrollbar {
+  width: 12px;
+}
+
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* You can adjust this background color as needed */
+}
+
+body::-webkit-scrollbar-thumb {
+  background-color: #009688; /* medium-teal */
+  border-radius: 10px;
+  border: 2px solid #f1f1f1; /* Matching the track's background color */
+}
+
+/* For Firefox */
+body {
+  scrollbar-width: thin;
+  scrollbar-color: #009688 #f1f1f1;
+}
