@@ -1,6 +1,11 @@
 "use client";
+import { useEffect, useState } from "react";
 import HomePage from "../components/home";
 
 export default function Home() {
-  return <HomePage />;
+  const [didMount, setDidMount] = useState(0);
+  useEffect(() => {
+    setDidMount(1);
+  }, []);
+  return didMount ? <HomePage /> : <></>;
 }
